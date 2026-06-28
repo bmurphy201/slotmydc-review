@@ -1,0 +1,109 @@
+/* ============================================================
+   SlotMyDC — Contact page-specific styles. Extends styles.css.
+   ============================================================ */
+
+/* ---------- hero band (single column) ---------- */
+.ct-hero {
+  padding: clamp(48px, 6vw, 84px) var(--gut) clamp(34px, 4vw, 48px);
+}
+.ct-hero .sheet { max-width: var(--maxw); margin: 0 auto; }
+.ct-eyebrow {
+  font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink-mute); margin-bottom: 22px;
+}
+.ct-hero h1 {
+  font-family: var(--f-disp); font-weight: 500;
+  font-size: clamp(40px, 5.6vw, 76px); line-height: 1.0;
+  letter-spacing: -0.025em; max-width: 18ch;
+}
+.ct-sub {
+  margin: 24px 0 0; max-width: 52ch;
+  font-size: clamp(17px, 1.6vw, 21px); line-height: 1.5; color: var(--ink-soft);
+}
+.ct-sub b { color: var(--ink); font-weight: 600; }
+
+/* ---------- two-column body ---------- */
+.ct-section { padding: 0 var(--gut) clamp(56px, 7vw, 96px); }
+.ct-grid {
+  display: grid; grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(32px, 5vw, 80px); align-items: start;
+  border-top: 1px solid var(--rule-2); padding-top: clamp(40px, 5vw, 64px);
+}
+.ct-kicker {
+  font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 16px;
+}
+.ct-copy .h2 { max-width: 12ch; }
+
+/* ---------- calendar embed placeholder ---------- */
+.cal-embed {
+  background: var(--paper-2); border: 1px solid var(--rule-2);
+  border-radius: 16px; box-shadow: var(--shadow); overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.cal-embed-top {
+  display: flex; align-items: center; gap: 11px;
+  padding: 16px 22px; border-bottom: 1px solid var(--rule);
+}
+.cal-ic { display: inline-flex; width: 22px; height: 22px; color: var(--blue); }
+.cal-ic > svg { width: 22px; height: 22px; display: block; }
+.cal-embed-label {
+  font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--ink-mute);
+}
+.cal-embed-mid {
+  /* placeholder graphic — replace this whole block with the live embed iframe */
+  padding: clamp(40px, 6vw, 72px) clamp(26px, 4vw, 44px);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; min-height: 220px;
+  background-image:
+    linear-gradient(var(--rule) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+  background-size: 34px 34px;
+  background-position: center;
+}
+.cal-embed-mid p {
+  margin: 0; max-width: 42ch;
+  font-family: var(--f-disp); font-weight: 500;
+  font-size: clamp(19px, 2vw, 26px); line-height: 1.28; letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.cal-cta { margin: 22px; border-radius: 10px; justify-content: center; }
+
+/* ---------- direct contact row ---------- */
+.ct-direct { padding: 0 var(--gut) clamp(64px, 8vw, 110px); }
+.cd-head {
+  font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--ink-mute);
+  padding-bottom: 18px; border-bottom: 1px solid var(--rule-2);
+}
+.cd-row {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+}
+.cd-col {
+  display: flex; flex-direction: column; gap: 10px;
+  padding: 30px 30px 30px 0; border-right: 1px solid var(--rule);
+}
+.cd-col:last-child { border-right: none; padding-right: 0; }
+.cd-ic { display: inline-flex; width: 26px; height: 26px; color: var(--blue); margin-bottom: 4px; }
+.cd-ic > svg { width: 26px; height: 26px; display: block; }
+.cd-l {
+  font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--ink-mute);
+}
+.cd-v {
+  font-family: var(--f-disp); font-weight: 500; font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.3; letter-spacing: -0.012em; color: var(--ink);
+}
+.cd-v a { transition: color .15s; }
+.cd-v a:hover { color: var(--blue); }
+
+/* ---------- responsive ---------- */
+@media (max-width: 980px) {
+  .ct-grid { grid-template-columns: 1fr; gap: 30px; }
+}
+@media (max-width: 640px) {
+  .cd-row { grid-template-columns: 1fr; }
+  .cd-col { border-right: none; border-bottom: 1px solid var(--rule); padding: 26px 0; }
+  .cd-col:last-child { border-bottom: none; }
+}
