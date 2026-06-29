@@ -89,13 +89,13 @@ function Clients() {
 
 /* the team — 4 principals, 2x2 */
 const TEAM = [
-  { id: "team-1", name: "Mark Riedel", role: "Principal", lead: true,
+  { id: "team-1", name: "Mark Riedel", role: "Principal", lead: true, photo: "uploads/mark-riedel.jpg",
     bio: "[Bio to be filled in by STA. 2 to 3 sentences. Lead with DC and warehouse experience: square footage, industries served, named project types where shareable.]" },
   { id: "team-2", name: "Jakub Dabrowski", role: "Principal",
     bio: "[Bio to be filled in by STA. Lead with technology background, software architecture for SlotMyDC, and platform credibility points.]" },
-  { id: "team-3", name: "Phil Wulff", role: "Principal",
+  { id: "team-3", name: "Phil Wulff", role: "Principal", photo: "uploads/phil-wulff.jpg",
     bio: "[Bio to be filled in by STA. Lead with finance and operations background, scaling experience.]" },
-  { id: "team-4", name: "David Kilzer", role: "Principal",
+  { id: "team-4", name: "David Kilzer", role: "Principal", photo: "uploads/david-kilzer.jpg",
     bio: "[Bio to be filled in by STA. Lead with consulting and warehouse design experience, named engagements where shareable.]" },
 ];
 function Team() {
@@ -110,7 +110,9 @@ function Team() {
           {TEAM.map((p) => (
             <div className="person" key={p.id}>
               <div className="shot">
-                <image-slot id={p.id} shape="rect" placeholder="Drop headshot"></image-slot>
+                {p.photo
+                  ? <img className="shot-img" src={p.photo} alt={p.name} />
+                  : <image-slot id={p.id} shape="rect" placeholder="Drop headshot"></image-slot>}
               </div>
               <div className="pbody">
                 <div className="pname">{p.name}</div>
