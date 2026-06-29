@@ -258,7 +258,6 @@ function ProofStrip() {
       <div className="sheet">
         <p className="q reveal">
           A 600K sq ft food-service DC saw pick rate climb <span className="sig">18% in 90 days</span> on the monthly cadence.
-          <span className="ph">Placeholder — replaced with real anonymized engagement on STA confirmation</span>
         </p>
         <div className="pcta reveal">
           <a className="btn btn-blue" href="contact.html">Already nodding along? Book a 30-min session <span className="ix">→</span></a>

@@ -15,9 +15,8 @@ function AboutHero() {
         </p>
       </div>
       <div className="hero-photo reveal">
-        <image-slot id="ab-hero" shape="rounded" radius="16" placeholder="Drop hero photo — warehouse interior / STA team on-site"></image-slot>
+        <div className="ph-photo"></div>
       </div>
-      <div className="photo-cap reveal"><span className="d"></span> Placeholder — real photo from inside a warehouse, STA team or operations. Industrial, not corporate.</div>
     </header>
   );
 }
@@ -36,7 +35,7 @@ function StoryDecades() {
             </div>
           </div>
           <div className="story-photo reveal">
-            <image-slot id="ab-ops" shape="rounded" radius="14" placeholder="Drop photo — consulting & operations work · clipboard, hard hats, real DC"></image-slot>
+            <div className="ph-photo"></div>
           </div>
         </div>
       </div>
@@ -57,7 +56,7 @@ function WhyBuilt() {
             the shift while labor costs climbed.
           </p>
           <div className="m-img reveal">
-            <image-slot id="ab-why" shape="rounded" radius="12" placeholder="Drop image — dimensioner on a shelf, or a warehouse aisle with a picker"></image-slot>
+            <div className="ph-photo"></div>
           </div>
           <p className="pq reveal">We could keep delivering one-off slotting projects. Or we could <span className="hl">productize the work.</span> So we did.</p>
         </div>
@@ -81,7 +80,6 @@ function Clients() {
             <div className="logo-cell" key={c}><span>{c}</span></div>
           ))}
         </div>
-        <p className="clients-note reveal">These are STA consulting clients across three decades, not SlotMyDC customers. We are showing them so you can see who is behind the program. <br/>Placeholder wordmarks — swap for grayscale client logos.</p>
       </div>
     </section>
   );
@@ -89,14 +87,10 @@ function Clients() {
 
 /* the team — 4 principals, 2x2 */
 const TEAM = [
-  { id: "team-1", name: "Mark Riedel", role: "Principal", lead: true, photo: "uploads/mark-riedel.jpg",
-    bio: "[Bio to be filled in by STA. 2 to 3 sentences. Lead with DC and warehouse experience: square footage, industries served, named project types where shareable.]" },
-  { id: "team-2", name: "Jakub Dabrowski", role: "Principal",
-    bio: "[Bio to be filled in by STA. Lead with technology background, software architecture for SlotMyDC, and platform credibility points.]" },
-  { id: "team-3", name: "Phil Wulff", role: "Principal", photo: "uploads/phil-wulff.jpg",
-    bio: "[Bio to be filled in by STA. Lead with finance and operations background, scaling experience.]" },
-  { id: "team-4", name: "David Kilzer", role: "Principal", photo: "uploads/david-kilzer.jpg",
-    bio: "[Bio to be filled in by STA. Lead with consulting and warehouse design experience, named engagements where shareable.]" },
+  { id: "team-1", name: "Mark Riedel", role: "Principal", lead: true, photo: "uploads/mark-riedel.jpg", bio: "" },
+  { id: "team-2", name: "Jakub Dabrowski", role: "Principal", bio: "" },
+  { id: "team-3", name: "Phil Wulff", role: "Principal", photo: "uploads/phil-wulff.jpg", bio: "" },
+  { id: "team-4", name: "David Kilzer", role: "Principal", photo: "uploads/david-kilzer.jpg", bio: "" },
 ];
 function Team() {
   return (
@@ -104,7 +98,6 @@ function Team() {
       <div className="sheet">
         <div className="team-head reveal">
           <h2 className="h2">The <span className="hl">team.</span></h2>
-          <div className="team-note"><span className="d"></span> Headshots &amp; bios to be confirmed by STA</div>
         </div>
         <div className="team reveal">
           {TEAM.map((p) => (
@@ -112,12 +105,12 @@ function Team() {
               <div className="shot">
                 {p.photo
                   ? <img className="shot-img" src={p.photo} alt={p.name} />
-                  : <image-slot id={p.id} shape="rect" placeholder="Drop headshot"></image-slot>}
+                  : <div className="ph-photo"></div>}
               </div>
               <div className="pbody">
                 <div className="pname">{p.name}</div>
                 <div className="prole">{p.role}</div>
-                <p className="pbio">{p.bio}</p>
+                {p.bio ? <p className="pbio">{p.bio}</p> : null}
               </div>
             </div>
           ))}
@@ -165,7 +158,7 @@ function CloseBand() {
   return (
     <section className="section dark closeband" id="cta">
       <div className="sheet">
-        <h2 className="h2 reveal">Talk to the team that <span className="hl">built it.</span></h2>
+        <h2 className="h2 reveal">Schedule a <span className="hl">working session</span> with the team.</h2>
         <p className="cb-sub reveal">
           Thirty minutes. Bring your DC numbers. We will walk through the savings math live and tell you,
           on the call, <b>whether SlotMyDC is the right fit</b> for your operation.
