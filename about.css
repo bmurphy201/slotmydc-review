@@ -79,7 +79,8 @@
 
 /* ---------- QBOID partner ---------- */
 .qboid-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: clamp(30px, 4vw, 64px); align-items: center; }
-.qboid-visual .qboid-photo image-slot { width: 100%; aspect-ratio: 4 / 3; display: block; box-shadow: var(--shadow); }
+.qboid-visual .qboid-photos { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(8px, 1.5vw, 18px); align-items: center; justify-items: center; }
+.qboid-visual .qboid-photos img { width: 100%; max-width: 230px; height: auto; display: block; filter: drop-shadow(0 14px 26px rgba(12,26,51,0.20)); }
 .qboid-mark { margin-top: 16px; display: flex; align-items: center; gap: 12px; }
 .qboid-mark .wm { font-family: var(--f-disp); font-weight: 600; font-size: 22px; letter-spacing: -0.01em; color: var(--ink); }
 .qboid-mark .tag { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--ink-mute); }

@@ -134,8 +134,9 @@ function QboidPartner() {
       <div className="sheet">
         <div className="qboid-grid">
           <div className="qboid-visual reveal">
-            <div className="qboid-photo">
-              <image-slot id="ab-qboid" shape="rounded" radius="14" placeholder="Drop QBOID device photo — handheld, in use in a warehouse"></image-slot>
+            <div className="qboid-photos">
+              <img src="uploads/qboid-front.webp" alt="QBOID dimensioner, front — measurement screen" />
+              <img src="uploads/qboid-back.webp" alt="QBOID dimensioner, back — cameras and scanner" />
             </div>
             <div className="qboid-mark">
               <span className="wm">QBOID</span>
