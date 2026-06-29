@@ -109,7 +109,7 @@ function Step1() {
                 <div className="src"><span className="si"><HI name="layout" /></span><div className="sx"><div className="sl">Current layout</div><div className="sd">CAD · DRAWING</div></div></div>
                 <div className="src q"><span className="si"><HI name="ruler" /></span><div className="sx"><div className="sl">QBOID dimensions</div><div className="sd">CUBIC · WEIGHT</div></div></div>
               </div>
-              <div className="flow-arrows"><div className="conv"></div></div>
+              <div className="flow-arrows"><span className="ar">↓</span></div>
               <div className="flow-model">
                 <div className="fm-t">Slot<b>My</b>DC model</div>
                 <div className="fm-d">One velocity-aware 3D model</div>
