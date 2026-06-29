@@ -11,6 +11,9 @@
 .about-hero .sub { margin-top: 24px; max-width: 60ch; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.55; color: var(--ink-soft); }
 .about-hero .sub b { color: var(--ink); font-weight: 600; }
 
+/* unfilled photo placeholders are read-only on the published site — no click-to-upload */
+image-slot { pointer-events: none; }
+
 .hero-photo { max-width: var(--maxw); margin: clamp(34px, 4vw, 56px) auto 0; }
 .hero-photo image-slot { width: 100%; aspect-ratio: 16 / 7; display: block; box-shadow: var(--shadow); }
 .photo-cap { max-width: var(--maxw); margin: 12px auto 0; font-family: var(--f-mono); font-size: 11px; letter-spacing: .03em; color: var(--ink-mute); display: flex; align-items: center; gap: 9px; }
