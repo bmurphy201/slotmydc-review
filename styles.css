@@ -316,8 +316,8 @@ h1, h2, h3 { margin: 0; font-family: var(--f-disp); font-weight: 500; line-heigh
 .sta-logo img { height: 40px; width: auto; display: block; }
 .sta-since { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--on-dark-mute); }
 .sta-metrics { border-top: 1px solid var(--rule-d); }
-.sta-metrics .m { display: grid; grid-template-columns: 3.6ch 1fr; align-items: baseline; gap: 24px; padding: 22px 4px; border-bottom: 1px solid var(--rule-d); }
-.sta-metrics .m .n { font-family: var(--f-disp); font-weight: 500; font-size: clamp(34px, 3.4vw, 50px); line-height: 0.9; letter-spacing: -0.02em; color: var(--signal); }
+.sta-metrics .m { display: grid; grid-template-columns: 4.8ch 1fr; align-items: baseline; gap: 24px; padding: 22px 4px; border-bottom: 1px solid var(--rule-d); font-size: clamp(34px, 3.4vw, 50px); }
+.sta-metrics .m .n { font-family: var(--f-disp); font-weight: 500; font-size: 1em; line-height: 0.9; letter-spacing: -0.02em; color: var(--signal); white-space: nowrap; }
 .sta-metrics .m .l { font-family: var(--f-mono); font-size: 12px; line-height: 1.5; color: var(--on-dark-mute); text-transform: uppercase; letter-spacing: .03em; }
 
 /* ============================================================
